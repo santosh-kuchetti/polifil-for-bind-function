@@ -1,5 +1,6 @@
 // Polifil for bind function
 
+// this is actual bind function
 let name = {
     firstname: 'santosh',
     lastname:'kuchetti'
@@ -12,7 +13,12 @@ let printname = function(hometown,state) {
 let printmyname = printname.bind(name, 'Santhabommali');
 printmyname('Andra Pradesh'); 
 
-Function.prototype.mybind = function (...args) {   //  to get 'name' into here, we extracted from args, from args we will get an array of arguments passed and we can get 'name' by args[0]
+
+
+
+// building a function called 'mybind' (its name can be anything) that's works exactly like the bind function
+
+Function.prototype.mybind = function (...args) {   //bind function is accesable for all the functions, to make mybinf accessableto  all functions, we have to add it into Function prototype  and  to get 'name' into here, we extracted from args, from args we will get an array of arguments passed and we can get 'name' by args[0]
 
     let obj = this;   //  when we call mybind over printname method,  inside mybind this variable points to printname
 
